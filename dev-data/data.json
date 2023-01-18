@@ -1,0 +1,54 @@
+[
+  {
+    "id": 0,
+    "price": 2103,
+    "title": "The Residences at NewCity",
+    "address": "1457 N Halsted St, Chicago, IL 60642",
+    "square": 120,
+    "rooms": 4,
+    "floor": "13/24",
+    "desc": "This property is managed by Beztak, 2022 recipient of the US Best Managed Companies for the third year in a row, sponsored by Deloitte Private and The Wall Street Journal.",
+    "date": "15 January, 2022",
+    "owner": "James Smith",
+    "imageURL": "../data-media/apartment-0.jpg"
+  },
+  {
+    "id": 1,
+    "price": 1773,
+    "title": "1400 Wabash",
+    "address": "1400 S Wabash Ave, Chicago, IL 60605",
+    "square": 83,
+    "rooms": 3,
+    "floor": "12/18",
+    "desc": "Located in Chicago’s South Loop, 1400 S Wabash is designed with over a decade of experience developing thoughtful buildings and caring communities.",
+    "date": "21 March, 2022",
+    "owner": "Sarah J. PArker",
+    "imageURL": "../data-media/apartment-1.jpg"
+  },
+  {
+    "id": 2,
+    "price": 2050,
+    "title": "Elevate",
+    "address": "930 W Altgeld St, Chicago, IL 60614",
+    "square": 75,
+    "rooms": 3,
+    "floor": "6/24",
+    "desc": "Chicago’s best neighborhood just got better. Welcome to ELEVATE Lincoln Park - a brand-new, elegantly designed, luxury apartment building located on a tree-lined street.",
+    "date": "09 Mat, 2022",
+    "owner": "Will Smith",
+    "imageURL": "../data-media/apartment-2.jpg"
+  },
+  {
+    "id": 3,
+    "price": 1600,
+    "title": "Central Michigan Avenue",
+    "address": "808 S Michigan Ave, Chicago, IL 60605",
+    "square": 117,
+    "rooms": 4,
+    "floor": "12/12",
+    "desc": "Central Michigan Avenue is within 5 minutes or 0.3 mile from Columbia College Chicago. It is also near DePaul University, Loop Campus and Roosevelt University, Chicago.",
+    "date": "21 September, 2022",
+    "owner": "Biden Joe Jr.",
+    "imageURL": "../data-media/apartment-0.jpg"
+  }
+]
