@@ -1,0 +1,1 @@
+# Apartment Renting Website copy
