@@ -12,6 +12,8 @@
       rel="stylesheet"
     />
 
+    <link rel="icon" href="../icons/icon-house.png" />
+
     <!-- ** Styling  -->
     <style>
       *,
@@ -35,11 +37,80 @@
         color: #444;
         background-color: #fff;
       }
+
+      img {
+        width: 400px;
+        height: auto;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
     </style>
   </head>
   <body>
+    <h1>🏡 Available Apartment 🏘️</h1>
     <div class="container">
-      <h1>🏡 Available Apartment 🏘️</h1>
+      <div class="heading">
+        <figure class="heading__back">
+          <a href="#" class="btn__back"> <span class="left"></span>Back </a>
+        </figure>
+        <div class="heading__title">
+          <h1>The Residences at NewCity</h1>
+        </div>
+
+        <div class="heading__price">
+          <h2>$400 / Month</h2>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero__pic">
+          <img src="../data-media/apartment-0.jpg" alt="Apartment No 1" />
+        </div>
+      </div>
+      <h2 class="apartment__title">The Residences at NewCity</h2>
+      <div class="details">
+        <div class="detail__location">
+          <h3 class="detail__text">Location:</h3>
+          <span>1457 N Halsted St, Chicago, IL 60642</span>
+        </div>
+      </div>
+
+      <div class="desc">
+        <p class="desc-title">
+          This property is managed by Beztak, 2022 recipient of the US Best
+          Managed Companies for the third year in a row, sponsored by Deloitte
+          Private and The Wall Street Journal
+        </p>
+      </div>
+
+      <div class="overview">
+        <h2>Overview:</h2>
+        <ul class="overview__block">
+          <li class="overview__item">
+            <img src="../icons/icon-avatar.png" alt="Owner" class="icon" />
+            <span class="overview__text">Owner</span>
+            <span class="overview__text">James Smith</span>
+          </li>
+          <li class="overview__item">
+            <img src="../icons/icon-rooms.png" alt="Room" class="icon" />
+            <span class="overview__text">Rooms</span>
+            <span class="overview__text">4</span>
+          </li>
+          <li class="overview__item">
+            <img src="../icons/icon-square.png" alt="Square" class="icon" />
+            <span class="overview__text">Square Meters</span>
+            <span class="overview__text">120</span>
+          </li>
+          <li class="overview__item">
+            <img src="../icons/icon-floor.png" alt="Floor" class="icon" />
+            <span class="overview__text">Floors</span>
+            <span class="overview__text">13/14</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

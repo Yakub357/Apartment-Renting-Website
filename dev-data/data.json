@@ -34,7 +34,7 @@
     "rooms": 3,
     "floor": "6/24",
     "desc": "Chicago’s best neighborhood just got better. Welcome to ELEVATE Lincoln Park - a brand-new, elegantly designed, luxury apartment building located on a tree-lined street.",
-    "date": "09 Mat, 2022",
+    "date": "09 May, 2022",
     "owner": "Will Smith",
     "imageURL": "../data-media/apartment-2.jpg"
   },
@@ -49,6 +49,6 @@
     "desc": "Central Michigan Avenue is within 5 minutes or 0.3 mile from Columbia College Chicago. It is also near DePaul University, Loop Campus and Roosevelt University, Chicago.",
     "date": "21 September, 2022",
     "owner": "Biden Joe Jr.",
-    "imageURL": "../data-media/apartment-0.jpg"
+    "imageURL": "../data-media/apartment-3.jpg"
   }
 ]
