@@ -40,8 +40,8 @@
       }
 
       .icon {
-        width: 24px;
-        height: 24px;
+        width: 36px;
+        height: 36px;
       }
 
       h1 {
@@ -132,17 +132,97 @@
       }
 
       .hero {
-        margin: 1.2rem 2rem;
+        margin: 1.2rem 0;
+        padding: 0 2rem;
         width: 100%;
-      }
-
-      .hero__pic {
-        border-radius: 8px;
       }
 
       img {
+        border-radius: 8px;
         width: 100%;
-        max-height: 100%;
+      }
+
+      .details {
+        margin: 1.2rem 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      .detail__location {
+        font-size: 1.8rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+
+      .detail__location h3 {
+        line-height: 1;
+        color: #f7783f;
+      }
+
+      .detail__location span {
+        color: #444;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      .desc {
+        display: block;
+        flex: 60%;
+      }
+
+      .desc-title {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+
+      .overview {
+        margin: 1.2rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .overview h2 {
+        line-height: 1;
+        color: #f7783f;
+      }
+
+      .overview__block {
+        align-self: center;
+        margin-left: 2rem;
+        list-style: none;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 1.2rem;
+      }
+
+      .overview__item {
+        border: 1px solid #f7783f;
+        border-radius: 8px;
+        padding: 1.6rem 2rem;
+
+        display: flex;
+        align-items: center;
+
+        font-size: 1.8rem;
+      }
+
+      .overview__text-1 {
+        color: #f7783f;
+        margin-left: 1.2rem;
+        font-weight: 600;
+      }
+      .overview__text-2 {
+        margin-left: 0.6rem;
+        color: #444;
       }
     </style>
   </head>
@@ -161,17 +241,16 @@
       </div>
       <div class="details">
         <div class="detail__location">
-          <h3 class="detail__text">Location:</h3>
+          <h3>Location</h3>
           <span>1457 N Halsted St, Chicago, IL 60642</span>
         </div>
-      </div>
-
-      <div class="desc">
-        <p class="desc-title">
-          This property is managed by Beztak, 2022 recipient of the US Best
-          Managed Companies for the third year in a row, sponsored by Deloitte
-          Private and The Wall Street Journal
-        </p>
+        <div class="desc">
+          <p class="desc-title">
+            This property is managed by Beztak, 2022 recipient of the US Best
+            Managed Companies for the third year in a row, sponsored by Deloitte
+            Private and The Wall Street Journal
+          </p>
+        </div>
       </div>
 
       <div class="overview">
@@ -179,23 +258,23 @@
         <ul class="overview__block">
           <li class="overview__item">
             <img src="../icons/icon-avatar.png" alt="Owner" class="icon" />
-            <span class="overview__text">Owner</span>
-            <span class="overview__text">James Smith</span>
+            <span class="overview__text-1">Owner:</span>
+            <span class="overview__text-2">James Smith</span>
           </li>
           <li class="overview__item">
             <img src="../icons/icon-rooms.png" alt="Room" class="icon" />
-            <span class="overview__text">Rooms</span>
-            <span class="overview__text">4</span>
+            <span class="overview__text-1">Rooms:</span>
+            <span class="overview__text-2">4</span>
           </li>
           <li class="overview__item">
             <img src="../icons/icon-square.png" alt="Square" class="icon" />
-            <span class="overview__text">Square Meters</span>
-            <span class="overview__text">120</span>
+            <span class="overview__text-1">Square Meters:</span>
+            <span class="overview__text-2">120</span>
           </li>
           <li class="overview__item">
             <img src="../icons/icon-floor.png" alt="Floor" class="icon" />
-            <span class="overview__text">Floors</span>
-            <span class="overview__text">13/14</span>
+            <span class="overview__text-1">Floors:</span>
+            <span class="overview__text-2">13/14</span>
           </li>
         </ul>
       </div>
