@@ -33,44 +33,132 @@
         padding: 5rem 5rem 10rem;
         line-height: 1.7;
         font-family: Roboto, sans-serif;
+        font-size: 1.2rem;
         min-height: 100vh;
         color: #444;
-        background-color: #fff;
-      }
-
-      img {
-        width: 400px;
-        height: auto;
+        background: linear-gradient(to bottom right, #16222a, #3a6073);
       }
 
       .icon {
         width: 24px;
         height: 24px;
       }
+
+      h1 {
+        margin: 0 1rem;
+        font-family: Roboto, sans-serif;
+        font-size: 6rem;
+        color: #64748b;
+        text-align: center;
+        position: relative;
+        border-bottom: 2px solid #f7783f;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+      }
+
+      /* ** Utility Styles */
+      /* margin-bottom-min */
+      .m-b-min {
+        margin-bottom: 1.2rem;
+      }
+
+      .container {
+        width: 95rem;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 1.2rem;
+        padding: 1rem;
+      }
+
+      .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1.2rem 2rem;
+      }
+
+      .btn__back {
+        display: inline-block;
+        background-color: #f7783f;
+        color: #fff;
+
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+
+        padding: 1.2rem 1.6rem;
+        border-radius: 12px;
+        border: 1px solid transparent;
+
+        transition: all 0.4s;
+      }
+
+      .btn__back:hover {
+        background-color: #fff;
+        border-color: #f7783f;
+        color: #f7783f;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn__back:hover .left {
+        margin-right: 1rem;
+        transform: scale(1.5);
+      }
+
+      .left {
+        margin-right: 0.8rem;
+      }
+
+      .heading__title {
+        color: #444;
+        font-size: 2.4rem;
+        font-weight: 600;
+      }
+
+      .heading__price {
+        color: #444;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .heading__price span {
+        color: #f7783f;
+      }
+
+      .hero {
+        margin: 1.2rem 2rem;
+        width: 100%;
+      }
+
+      .hero__pic {
+        border-radius: 8px;
+      }
+
+      img {
+        width: 100%;
+        max-height: 100%;
+      }
     </style>
   </head>
   <body>
-    <h1>🏡 Available Apartment 🏘️</h1>
     <div class="container">
+      <h1 class="m-b-min">🏡 OVERVIEW 🏘️</h1>
       <div class="heading">
-        <figure class="heading__back">
-          <a href="#" class="btn__back"> <span class="left"></span>Back </a>
-        </figure>
-        <div class="heading__title">
-          <h1>The Residences at NewCity</h1>
-        </div>
+        <a href="#" class="btn__back"> <span class="left">👈</span>Back </a>
+        <div class="heading__title">The Residences at NewCity</div>
 
-        <div class="heading__price">
-          <h2>$400 / Month</h2>
-        </div>
+        <div class="heading__price"><span>$400</span> / Month</div>
       </div>
 
       <div class="hero">
-        <div class="hero__pic">
-          <img src="../data-media/apartment-0.jpg" alt="Apartment No 1" />
-        </div>
+        <img src="../data-media/apartment-0.jpg" alt="Apartment No 1" />
       </div>
-      <h2 class="apartment__title">The Residences at NewCity</h2>
       <div class="details">
         <div class="detail__location">
           <h3 class="detail__text">Location:</h3>
