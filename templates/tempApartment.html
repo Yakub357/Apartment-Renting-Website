@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apartment #1</title>
+    <title>Apartment {%ID%}</title>
 
     <!-- ** Inserting Roboto font family -->
     <link
@@ -230,10 +230,12 @@
     <div class="container">
       <h1 class="m-b-min">🏡 OVERVIEW 🏘️</h1>
       <div class="heading">
-        <a href="#" class="btn__back"> <span class="left">👈</span>Back </a>
-        <div class="heading__title">The Residences at NewCity</div>
+        <a href="/overview" class="btn__back">
+          <span class="left">👈</span>Back
+        </a>
+        <div class="heading__title">{%TITLE%}</div>
 
-        <div class="heading__price"><span>$400</span> / Month</div>
+        <div class="heading__price"><span>${%PRICE%}</span> / Month</div>
       </div>
 
       <div class="hero">
@@ -242,14 +244,10 @@
       <div class="details">
         <div class="detail__location">
           <h3>Location</h3>
-          <span>1457 N Halsted St, Chicago, IL 60642</span>
+          <span>{%ADDRESS%}</span>
         </div>
         <div class="desc">
-          <p class="desc-title">
-            This property is managed by Beztak, 2022 recipient of the US Best
-            Managed Companies for the third year in a row, sponsored by Deloitte
-            Private and The Wall Street Journal
-          </p>
+          <p class="desc-title">{%DESCRIPTION%}</p>
         </div>
       </div>
 
@@ -259,22 +257,22 @@
           <li class="overview__item">
             <img src="../icons/icon-avatar.png" alt="Owner" class="icon" />
             <span class="overview__text-1">Owner:</span>
-            <span class="overview__text-2">James Smith</span>
+            <span class="overview__text-2">{%OWNER%}</span>
           </li>
           <li class="overview__item">
             <img src="../icons/icon-rooms.png" alt="Room" class="icon" />
             <span class="overview__text-1">Rooms:</span>
-            <span class="overview__text-2">4</span>
+            <span class="overview__text-2">{%ROOMS%}</span>
           </li>
           <li class="overview__item">
             <img src="../icons/icon-square.png" alt="Square" class="icon" />
             <span class="overview__text-1">Square Meters:</span>
-            <span class="overview__text-2">120</span>
+            <span class="overview__text-2">{%SQUARE%}</span>
           </li>
           <li class="overview__item">
             <img src="../icons/icon-floor.png" alt="Floor" class="icon" />
             <span class="overview__text-1">Floors:</span>
-            <span class="overview__text-2">13/14</span>
+            <span class="overview__text-2">{%FLOOR%}</span>
           </li>
         </ul>
       </div>

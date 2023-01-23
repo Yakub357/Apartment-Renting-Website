@@ -1,0 +1,53 @@
+<figure class="card">
+  <div class="card__preview">
+    <div class="card__photo">
+      <img src="{%IMAGE_URL%}" alt="Apartment Main Footage" />
+    </div>
+    <div class="card__cost">$ {%PRICE%} / month</div>
+  </div>
+
+  <div class="card__details">
+    <div class="card__header m-b-min">
+      <span class="card__title">{%TITLE%}</span>
+      <span class="card__subtitle">{%ADDRESS%} </span>
+    </div>
+    <div class="card__params m-b-min">
+      <div class="card__param">
+        <img src="../icons/icon-square.png" alt="Square Icon" class="icon" />
+        Floor space:
+        <span> {%SQUARE%} м²</span>
+      </div>
+      <div class="card__param">
+        <img src="../icons/icon-rooms.png" alt="Rooms Icon" class="icon" />
+        Rooms:
+        <span class="card__param--text"> {%ROOMS%} </span>
+      </div>
+      <div class="card__param">
+        <img src="../icons/icon-floor.png" alt="Floor Icon" class="icon" />
+        Floor:
+        <span class="card__param--text"> {%FLOOR%} </span>
+      </div>
+    </div>
+    <div class="card__desc m-b-min">
+      <p>
+        {%DESCRIPTION%}
+        <a href="#">More info...</a>
+      </p>
+    </div>
+    <div class="card__date m-b-min">
+      <span class="card__date-text">Added Date: </span>
+      {%DATE%}
+    </div>
+    <div class="card__footer">
+      <div class="card__person">
+        <div class="card__person-icon">
+          <img src="../icons/icon-avatar.png" alt="User Icon" class="icon" />
+        </div>
+        <div class="card__person-name">{%OWNER%}</div>
+      </div>
+      <div class="card__contact">
+        <a href="/apartment?id={%ID%}" class="card__button">Take a look --></a>
+      </div>
+    </div>
+  </div>
+</figure>

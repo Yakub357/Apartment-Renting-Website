@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "price": 2103,
+    "price": "2,103",
     "title": "The Residences at NewCity",
     "address": "1457 N Halsted St, Chicago, IL 60642",
     "square": 120,
@@ -10,11 +10,11 @@
     "desc": "This property is managed by Beztak, 2022 recipient of the US Best Managed Companies for the third year in a row, sponsored by Deloitte Private and The Wall Street Journal.",
     "date": "15 January, 2022",
     "owner": "James Smith",
-    "imageURL": "../data-media/apartment-0.jpg"
+    "imageURL": "/data-media/apartment-0.jpg"
   },
   {
     "id": 1,
-    "price": 1773,
+    "price": "1,773",
     "title": "1400 Wabash",
     "address": "1400 S Wabash Ave, Chicago, IL 60605",
     "square": 83,
@@ -27,7 +27,7 @@
   },
   {
     "id": 2,
-    "price": 2050,
+    "price": "2,050",
     "title": "Elevate",
     "address": "930 W Altgeld St, Chicago, IL 60614",
     "square": 75,
@@ -40,7 +40,7 @@
   },
   {
     "id": 3,
-    "price": 1600,
+    "price": "1,600",
     "title": "Central Michigan Avenue",
     "address": "808 S Michigan Ave, Chicago, IL 60605",
     "square": 117,
