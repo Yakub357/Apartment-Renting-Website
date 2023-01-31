@@ -1,0 +1,26 @@
+{
+  "name": "apartment-rent",
+  "version": "1.0.0",
+  "description": "Available apartments databse ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yakub357/Apartment-Renting-Website.git"
+  },
+  "keywords": [
+    "Coding",
+    "Raccoon"
+  ],
+  "author": "Coding Raccoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yakub357/Apartment-Renting-Website/issues"
+  },
+  "homepage": "https://github.com/Yakub357/Apartment-Renting-Website#readme",
+  "dependencies": {
+    "slugify": "^1.6.5"
+  }
+}

@@ -1,591 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="../icons/icon-house.png" />
-    <title>Apartments</title>
+        <link rel="icon" href="../icons/icon-house.png" />
+        <title>Apartments</title>
 
-    <!-- ** Inserting Roboto font family -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+        <!-- ** Inserting Roboto font family -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- ** Styling  -->
-    <style>
-      *,
-      *::before,
-      *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: inherit;
-      }
+        <!-- ** Styling  -->
+        <style>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: inherit;
+            }
 
-      html {
-        font-size: 62.5%;
-        box-sizing: border-box;
-      }
+            html {
+                font-size: 62.5%;
+                box-sizing: border-box;
+            }
 
-      body {
-        padding: 5rem 5rem 10rem;
-        line-height: 1.7;
-        font-family: Roboto, sans-serif;
-        font-weight: 400;
-        font-size: 1.2rem;
-        min-height: 100vh;
-        color: #444;
-        background: linear-gradient(to bottom right, #16222a, #3a6073);
-      }
+            body {
+                padding: 5rem 5rem 10rem;
+                line-height: 1.7;
+                font-family: Roboto, sans-serif;
+                font-weight: 400;
+                font-size: 1.2rem;
+                min-height: 100vh;
+                color: #444;
+                background: linear-gradient(to bottom right, #16222a, #3a6073);
+            }
 
-      .icon {
-        width: 2.4rem;
-        height: 2.4rem;
-      }
+            .icon {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
 
-      h1 {
-        margin: 0 1rem;
-        font-family: Roboto, sans-serif;
-        font-size: 6rem;
-        color: #64748b;
-        text-align: center;
-        position: relative;
-        border-bottom: 2px solid #f7783f;
-      }
+            h1 {
+                margin: 0 1rem;
+                font-family: Roboto, sans-serif;
+                font-size: 6rem;
+                color: #64748b;
+                text-align: center;
+                position: relative;
+                border-bottom: 2px solid #f7783f;
+            }
 
-      img {
-        width: 100%;
-      }
+            img {
+                width: 100%;
+            }
 
-      a:link,
-      a:visited {
-        text-decoration: none;
-      }
+            a:link,
+            a:visited {
+                text-decoration: none;
+            }
 
-      /* ** Utility Styles */
-      /* margin-bottom-min */
-      .m-b-min {
-        margin-bottom: 1.2rem;
-      }
+            /* ** Utility Styles */
+            /* margin-bottom-min */
+            .m-b-min {
+                margin-bottom: 1.2rem;
+            }
 
-      .container {
-        width: 95rem;
-        margin: 0 auto;
-        background-color: #fff;
-        border-radius: 1.2rem;
-        padding: 1rem;
-      }
+            .container {
+                width: 95rem;
+                margin: 0 auto;
+                background-color: #fff;
+                border-radius: 1.2rem;
+                padding: 1rem;
+            }
 
-      .cards-container {
-        margin-top: 3.2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
+            .cards-container {
+                margin-top: 3.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
 
-      .card {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        gap: 2.4rem;
-        padding: 1.6rem;
-        margin-bottom: 1.6rem;
-        background-color: #fff;
-        border: 1px solid #f7783f;
-        border-radius: 4px;
+            .card {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                gap: 2.4rem;
+                padding: 1.6rem;
+                margin-bottom: 1.6rem;
+                background-color: #fff;
+                border: 1px solid #f7783f;
+                border-radius: 4px;
 
-        width: 80rem;
+                width: 80rem;
 
-        transition: all 0.2s ease-in-out;
-      }
+                transition: all 0.2s ease-in-out;
+            }
 
-      .card:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transform: translateY(-8px);
-      }
+            .card:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                transform: translateY(-8px);
+            }
 
-      .card__preview {
-        flex: 0 0 200rem;
-        max-width: 20rem;
+            .card__preview {
+                flex: 0 0 200rem;
+                max-width: 20rem;
 
-        display: flex;
-        flex-direction: column;
-      }
+                display: flex;
+                flex-direction: column;
+            }
 
-      .card__photo {
-        width: 20rem;
-        height: 16rem;
-        overflow: hidden;
-        border-radius: 4px;
-        background-color: red;
+            .card__photo {
+                width: 20rem;
+                height: 16rem;
+                overflow: hidden;
+                border-radius: 4px;
+                background-color: red;
 
-        overflow: hidden;
-      }
+                overflow: hidden;
+            }
 
-      .card__photo img {
-        width: auto;
-        height: 100%;
-      }
+            .card__photo img {
+                width: auto;
+                height: 100%;
+            }
 
-      .card__cost {
-        padding: 0.4rem 0.6rem;
+            .card__cost {
+                padding: 0.4rem 0.6rem;
 
-        text-align: center;
-        line-height: 1.4;
-        font-size: 1.4rem;
-        font-weight: 600;
-        color: #000;
-      }
+                text-align: center;
+                line-height: 1.4;
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #000;
+            }
 
-      .card__details {
-        flex: 1 1 100%;
-      }
+            .card__details {
+                flex: 1 1 100%;
+            }
 
-      .card__header {
-        display: flex;
-        flex-direction: column;
-      }
+            .card__header {
+                display: flex;
+                flex-direction: column;
+            }
 
-      .card__title {
-        display: block;
-        font-weight: 600;
-        font-size: 2.4rem;
-        line-height: 1.2;
-      }
-      .card__subtitle {
-        display: block;
-        font-size: 1.4rem;
-        font-weight: 300;
-        line-height: 1.2;
-        color: #64748b;
-      }
+            .card__title {
+                display: block;
+                font-weight: 600;
+                font-size: 2.4rem;
+                line-height: 1.2;
+            }
+            .card__subtitle {
+                display: block;
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 1.2;
+                color: #64748b;
+            }
 
-      .card__params {
-        display: flex;
-        flex-wrap: nowrap;
-      }
+            .card__params {
+                display: flex;
+                flex-wrap: nowrap;
+            }
 
-      .card__param {
-        display: inline-block;
-        margin-right: 1.8rem;
+            .card__param {
+                display: inline-block;
+                margin-right: 1.8rem;
 
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
 
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.2;
-      }
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.2;
+            }
 
-      .card__param img {
-        width: 1.8rem;
-        height: 1.8rem;
-      }
-      .card__param span {
-        color: #588ed8;
-      }
+            .card__param img {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+            .card__param span {
+                color: #588ed8;
+            }
 
-      .card__desc {
-        box-sizing: inherit;
-        display: block;
-      }
+            .card__desc {
+                box-sizing: inherit;
+                display: block;
+            }
 
-      .card__desc p {
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.4;
-      }
+            .card__desc p {
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.4;
+            }
 
-      .card__desc a {
-        color: #f7783f;
-        font-weight: 600;
+            .card__desc a {
+                color: #f7783f;
+                font-weight: 600;
 
-        transition: all 0.6s;
-      }
+                transition: all 0.6s;
+            }
 
-      .card__desc a:hover {
-        text-decoration: underline;
-      }
+            .card__desc a:hover {
+                text-decoration: underline;
+            }
 
-      .card__date {
-        display: block;
-        color: #94a3b8;
-      }
+            .card__date {
+                display: block;
+                color: #94a3b8;
+            }
 
-      .card__date span {
-        color: #64748b;
-        font-weight: 600;
-      }
+            .card__date span {
+                color: #64748b;
+                font-weight: 600;
+            }
 
-      .card__footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+            .card__footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
 
-      .card__person {
-        display: flex;
-        align-items: center;
-      }
+            .card__person {
+                display: flex;
+                align-items: center;
+            }
 
-      .card__person-icon {
-        margin-right: 1rem;
-        width: 2.4rem;
-        height: 2.4rem;
-      }
+            .card__person-icon {
+                margin-right: 1rem;
+                width: 2.4rem;
+                height: 2.4rem;
+            }
 
-      .card__person-name {
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: #444;
-      }
+            .card__person-name {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: #444;
+            }
 
-      .card__contact {
-        margin-right: 1.48rem;
-      }
+            .card__contact {
+                margin-right: 1.48rem;
+            }
 
-      .card__button {
-        display: inline-block;
-        background-color: #f7783f;
-        color: #fff;
+            .card__button {
+                display: inline-block;
+                background-color: #f7783f;
+                color: #fff;
 
-        font-weight: 400;
-        font-size: 1.4rem;
-        line-height: 1.2;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.2;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
 
-        padding: 1.2rem 1.6rem;
-        border-radius: 8px;
-        border: 1px solid transparent;
+                padding: 1.2rem 1.6rem;
+                border-radius: 8px;
+                border: 1px solid transparent;
 
-        transition: 0.4s;
-      }
+                transition: 0.4s;
+            }
 
-      .card__button:hover {
-        background-color: #fff;
-        border-color: #f7783f;
-        color: #f7783f;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>🏡 Available Apartments 🏘️</h1>
+            .card__button:hover {
+                background-color: #fff;
+                border-color: #f7783f;
+                color: #f7783f;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🏡 Available Apartments 🏘️</h1>
 
-      <div class="cards-container">
-        <figure class="card" id="0">
-          <div class="card__preview">
-            <div class="card__photo">
-              <img
-                src="../data-media/apartment-0.jpg"
-                alt="Apartment Main Footage"
-              />
+            <div class="cards-container">
+                <figure class="card" id="0">
+                    <div class="card__preview">
+                        <div class="card__photo">
+                            <img
+                                src="../data-media/apartment-0.jpg"
+                                alt="Apartment Main Footage"
+                            />
+                        </div>
+                        <div class="card__cost">$ 2,103 / month</div>
+                    </div>
+
+                    <div class="card__details">
+                        <div class="card__header m-b-min">
+                            <span class="card__title"
+                                >The Residences at NewCity</span
+                            >
+                            <span class="card__subtitle"
+                                >1457 N Halsted St, Chicago, IL 60642
+                            </span>
+                        </div>
+                        <div class="card__params m-b-min">
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-square.png"
+                                    alt="Square Icon"
+                                    class="icon"
+                                />
+                                Floor space:
+                                <span> 120 м²</span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-rooms.png"
+                                    alt="Rooms Icon"
+                                    class="icon"
+                                />
+                                Rooms:
+                                <span class="card__param--text"> 4 </span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-floor.png"
+                                    alt="Floor Icon"
+                                    class="icon"
+                                />
+                                Floor:
+                                <span class="card__param--text"> 13/24 </span>
+                            </div>
+                        </div>
+                        <div class="card__desc m-b-min">
+                            <p>
+                                his property is managed by Beztak, 2022
+                                recipient of the US Best Managed Companies for
+                                the third year in a row, sponsored by Deloitte
+                                Private and The Wall Street Journal.
+                                <a href="#">More info...</a>
+                            </p>
+                        </div>
+                        <div class="card__date m-b-min">
+                            <span class="card__date-text">Added Date: </span>
+                            15 January, 2022
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__person">
+                                <div class="card__person-icon">
+                                    <img
+                                        src="../icons/icon-avatar.png"
+                                        alt="User Icon"
+                                        class="icon"
+                                    />
+                                </div>
+                                <div class="card__person-name">James Smith</div>
+                            </div>
+                            <div class="card__contact">
+                                <a href="#" class="card__button"
+                                    >Take a look --></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                <figure class="card" id="1">
+                    <div class="card__preview">
+                        <div class="card__photo">
+                            <img
+                                src="../data-media/apartment-1.jpg"
+                                alt="Apartment Main Footage"
+                            />
+                        </div>
+                        <div class="card__cost">$ 1,773 / month</div>
+                    </div>
+
+                    <div class="card__details">
+                        <div class="card__header m-b-min">
+                            <span class="card__title">1400 Wabash</span>
+                            <span class="card__subtitle"
+                                >1400 S Wabash Ave, Chicago, IL 60605
+                            </span>
+                        </div>
+                        <div class="card__params m-b-min">
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-square.png"
+                                    alt="Square Icon"
+                                    class="icon"
+                                />
+                                Floor space:
+                                <span> 83 м²</span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-rooms.png"
+                                    alt="Rooms Icon"
+                                    class="icon"
+                                />
+                                Rooms:
+                                <span class="card__param--text"> 3 </span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-floor.png"
+                                    alt="Floor Icon"
+                                    class="icon"
+                                />
+                                Floor:
+                                <span class="card__param--text"> 12/18 </span>
+                            </div>
+                        </div>
+                        <div class="card__desc m-b-min">
+                            <p>
+                                Located in Chicago’s South Loop, 1400 S Wabash
+                                is designed with over a decade of experience
+                                developing thoughtful buildings and caring
+                                communities.", "date": "21 March, 2022
+                                <a href="#">More info...</a>
+                            </p>
+                        </div>
+                        <div class="card__date m-b-min">
+                            <span class="card__date-text">Added Date: </span>
+                            21 March, 2022
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__person">
+                                <div class="card__person-icon">
+                                    <img
+                                        src="../icons/icon-avatar.png"
+                                        alt="User Icon"
+                                        class="icon"
+                                    />
+                                </div>
+                                <div class="card__person-name">
+                                    JSarah J. PArker
+                                </div>
+                            </div>
+                            <div class="card__contact">
+                                <a href="#" class="card__button"
+                                    >Take a look --></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                <figure class="card" id="2">
+                    <div class="card__preview">
+                        <div class="card__photo">
+                            <img
+                                src="../data-media/apartment-2.jpg"
+                                alt="Apartment Main Footage"
+                            />
+                        </div>
+                        <div class="card__cost">$ 2,050 / month</div>
+                    </div>
+
+                    <div class="card__details">
+                        <div class="card__header m-b-min">
+                            <span class="card__title">Elevate</span>
+                            <span class="card__subtitle"
+                                >930 W Altgeld St, Chicago, IL 60614
+                            </span>
+                        </div>
+                        <div class="card__params m-b-min">
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-square.png"
+                                    alt="Square Icon"
+                                    class="icon"
+                                />
+                                Floor space:
+                                <span> 75 м²</span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-rooms.png"
+                                    alt="Rooms Icon"
+                                    class="icon"
+                                />
+                                Rooms:
+                                <span class="card__param--text"> 3 </span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-floor.png"
+                                    alt="Floor Icon"
+                                    class="icon"
+                                />
+                                Floor:
+                                <span class="card__param--text"> 16/24 </span>
+                            </div>
+                        </div>
+                        <div class="card__desc m-b-min">
+                            <p>
+                                Chicago’s best neighborhood just got better.
+                                Welcome to ELEVATE Lincoln Park - a brand-new,
+                                elegantly designed, luxury apartment building
+                                located on a tree-lined street.
+                                <a href="#">More info...</a>
+                            </p>
+                        </div>
+                        <div class="card__date m-b-min">
+                            <span class="card__date-text">Added Date: </span>
+                            09 March, 2022
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__person">
+                                <div class="card__person-icon">
+                                    <img
+                                        src="../icons/icon-avatar.png"
+                                        alt="User Icon"
+                                        class="icon"
+                                    />
+                                </div>
+                                <div class="card__person-name">Will Smith</div>
+                            </div>
+                            <div class="card__contact">
+                                <a href="#" class="card__button"
+                                    >Take a look --></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                <figure class="card" id="3">
+                    <div class="card__preview">
+                        <div class="card__photo">
+                            <img
+                                src="../data-media/apartment-3.jpg"
+                                alt="Apartment Main Footage"
+                            />
+                        </div>
+                        <div class="card__cost">$ 1,600 / month</div>
+                    </div>
+
+                    <div class="card__details">
+                        <div class="card__header m-b-min">
+                            <span class="card__title"
+                                >Central Michigan Avenue</span
+                            >
+                            <span class="card__subtitle"
+                                >808 S Michigan Ave, Chicago, IL 60605
+                            </span>
+                        </div>
+                        <div class="card__params m-b-min">
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-square.png"
+                                    alt="Square Icon"
+                                    class="icon"
+                                />
+                                Floor space:
+                                <span> 117 м²</span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-rooms.png"
+                                    alt="Rooms Icon"
+                                    class="icon"
+                                />
+                                Rooms:
+                                <span class="card__param--text"> 4 </span>
+                            </div>
+                            <div class="card__param">
+                                <img
+                                    src="../icons/icon-floor.png"
+                                    alt="Floor Icon"
+                                    class="icon"
+                                />
+                                Floor:
+                                <span class="card__param--text"> 12/12 </span>
+                            </div>
+                        </div>
+                        <div class="card__desc m-b-min">
+                            <p>
+                                Central Michigan Avenue is within 5 minutes or
+                                0.3 mile from Columbia College Chicago. It is
+                                also near DePaul University, Loop Campus and
+                                Roosevelt University, Chicago.
+                                <a href="#">More info...</a>
+                            </p>
+                        </div>
+                        <div class="card__date m-b-min">
+                            <span class="card__date-text">Added Date: </span>
+                            21 September, 2022
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__person">
+                                <div class="card__person-icon">
+                                    <img
+                                        src="../icons/icon-avatar.png"
+                                        alt="User Icon"
+                                        class="icon"
+                                    />
+                                </div>
+                                <div class="card__person-name">
+                                    Biden Joe Jr.
+                                </div>
+                            </div>
+                            <div class="card__contact">
+                                <a href="#" class="card__button"
+                                    >Take a look --></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </figure>
             </div>
-            <div class="card__cost">$ 2,103 / month</div>
-          </div>
-
-          <div class="card__details">
-            <div class="card__header m-b-min">
-              <span class="card__title">The Residences at NewCity</span>
-              <span class="card__subtitle"
-                >1457 N Halsted St, Chicago, IL 60642
-              </span>
-            </div>
-            <div class="card__params m-b-min">
-              <div class="card__param">
-                <img
-                  src="../icons/icon-square.png"
-                  alt="Square Icon"
-                  class="icon"
-                />
-                Floor space:
-                <span> 120 м²</span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-rooms.png"
-                  alt="Rooms Icon"
-                  class="icon"
-                />
-                Rooms:
-                <span class="card__param--text"> 4 </span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-floor.png"
-                  alt="Floor Icon"
-                  class="icon"
-                />
-                Floor:
-                <span class="card__param--text"> 13/24 </span>
-              </div>
-            </div>
-            <div class="card__desc m-b-min">
-              <p>
-                his property is managed by Beztak, 2022 recipient of the US Best
-                Managed Companies for the third year in a row, sponsored by
-                Deloitte Private and The Wall Street Journal.
-                <a href="#">More info...</a>
-              </p>
-            </div>
-            <div class="card__date m-b-min">
-              <span class="card__date-text">Added Date: </span>
-              15 January, 2022
-            </div>
-            <div class="card__footer">
-              <div class="card__person">
-                <div class="card__person-icon">
-                  <img
-                    src="../icons/icon-avatar.png"
-                    alt="User Icon"
-                    class="icon"
-                  />
-                </div>
-                <div class="card__person-name">James Smith</div>
-              </div>
-              <div class="card__contact">
-                <a href="#" class="card__button">Take a look --></a>
-              </div>
-            </div>
-          </div>
-        </figure>
-        <figure class="card" id="1">
-          <div class="card__preview">
-            <div class="card__photo">
-              <img
-                src="../data-media/apartment-1.jpg"
-                alt="Apartment Main Footage"
-              />
-            </div>
-            <div class="card__cost">$ 1,773 / month</div>
-          </div>
-
-          <div class="card__details">
-            <div class="card__header m-b-min">
-              <span class="card__title">1400 Wabash</span>
-              <span class="card__subtitle"
-                >1400 S Wabash Ave, Chicago, IL 60605
-              </span>
-            </div>
-            <div class="card__params m-b-min">
-              <div class="card__param">
-                <img
-                  src="../icons/icon-square.png"
-                  alt="Square Icon"
-                  class="icon"
-                />
-                Floor space:
-                <span> 83 м²</span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-rooms.png"
-                  alt="Rooms Icon"
-                  class="icon"
-                />
-                Rooms:
-                <span class="card__param--text"> 3 </span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-floor.png"
-                  alt="Floor Icon"
-                  class="icon"
-                />
-                Floor:
-                <span class="card__param--text"> 12/18 </span>
-              </div>
-            </div>
-            <div class="card__desc m-b-min">
-              <p>
-                Located in Chicago’s South Loop, 1400 S Wabash is designed with
-                over a decade of experience developing thoughtful buildings and
-                caring communities.", "date": "21 March, 2022
-                <a href="#">More info...</a>
-              </p>
-            </div>
-            <div class="card__date m-b-min">
-              <span class="card__date-text">Added Date: </span>
-              21 March, 2022
-            </div>
-            <div class="card__footer">
-              <div class="card__person">
-                <div class="card__person-icon">
-                  <img
-                    src="../icons/icon-avatar.png"
-                    alt="User Icon"
-                    class="icon"
-                  />
-                </div>
-                <div class="card__person-name">JSarah J. PArker</div>
-              </div>
-              <div class="card__contact">
-                <a href="#" class="card__button">Take a look --></a>
-              </div>
-            </div>
-          </div>
-        </figure>
-        <figure class="card" id="2">
-          <div class="card__preview">
-            <div class="card__photo">
-              <img
-                src="../data-media/apartment-2.jpg"
-                alt="Apartment Main Footage"
-              />
-            </div>
-            <div class="card__cost">$ 2,050 / month</div>
-          </div>
-
-          <div class="card__details">
-            <div class="card__header m-b-min">
-              <span class="card__title">Elevate</span>
-              <span class="card__subtitle"
-                >930 W Altgeld St, Chicago, IL 60614
-              </span>
-            </div>
-            <div class="card__params m-b-min">
-              <div class="card__param">
-                <img
-                  src="../icons/icon-square.png"
-                  alt="Square Icon"
-                  class="icon"
-                />
-                Floor space:
-                <span> 75 м²</span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-rooms.png"
-                  alt="Rooms Icon"
-                  class="icon"
-                />
-                Rooms:
-                <span class="card__param--text"> 3 </span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-floor.png"
-                  alt="Floor Icon"
-                  class="icon"
-                />
-                Floor:
-                <span class="card__param--text"> 16/24 </span>
-              </div>
-            </div>
-            <div class="card__desc m-b-min">
-              <p>
-                Chicago’s best neighborhood just got better. Welcome to ELEVATE
-                Lincoln Park - a brand-new, elegantly designed, luxury apartment
-                building located on a tree-lined street.
-                <a href="#">More info...</a>
-              </p>
-            </div>
-            <div class="card__date m-b-min">
-              <span class="card__date-text">Added Date: </span>
-              09 March, 2022
-            </div>
-            <div class="card__footer">
-              <div class="card__person">
-                <div class="card__person-icon">
-                  <img
-                    src="../icons/icon-avatar.png"
-                    alt="User Icon"
-                    class="icon"
-                  />
-                </div>
-                <div class="card__person-name">Will Smith</div>
-              </div>
-              <div class="card__contact">
-                <a href="#" class="card__button">Take a look --></a>
-              </div>
-            </div>
-          </div>
-        </figure>
-        <figure class="card" id="3">
-          <div class="card__preview">
-            <div class="card__photo">
-              <img
-                src="../data-media/apartment-3.jpg"
-                alt="Apartment Main Footage"
-              />
-            </div>
-            <div class="card__cost">$ 1,600 / month</div>
-          </div>
-
-          <div class="card__details">
-            <div class="card__header m-b-min">
-              <span class="card__title">Central Michigan Avenue</span>
-              <span class="card__subtitle"
-                >808 S Michigan Ave, Chicago, IL 60605
-              </span>
-            </div>
-            <div class="card__params m-b-min">
-              <div class="card__param">
-                <img
-                  src="../icons/icon-square.png"
-                  alt="Square Icon"
-                  class="icon"
-                />
-                Floor space:
-                <span> 117 м²</span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-rooms.png"
-                  alt="Rooms Icon"
-                  class="icon"
-                />
-                Rooms:
-                <span class="card__param--text"> 4 </span>
-              </div>
-              <div class="card__param">
-                <img
-                  src="../icons/icon-floor.png"
-                  alt="Floor Icon"
-                  class="icon"
-                />
-                Floor:
-                <span class="card__param--text"> 12/12 </span>
-              </div>
-            </div>
-            <div class="card__desc m-b-min">
-              <p>
-                Central Michigan Avenue is within 5 minutes or 0.3 mile from
-                Columbia College Chicago. It is also near DePaul University,
-                Loop Campus and Roosevelt University, Chicago.
-                <a href="#">More info...</a>
-              </p>
-            </div>
-            <div class="card__date m-b-min">
-              <span class="card__date-text">Added Date: </span>
-              21 September, 2022
-            </div>
-            <div class="card__footer">
-              <div class="card__person">
-                <div class="card__person-icon">
-                  <img
-                    src="../icons/icon-avatar.png"
-                    alt="User Icon"
-                    class="icon"
-                  />
-                </div>
-                <div class="card__person-name">Biden Joe Jr.</div>
-              </div>
-              <div class="card__contact">
-                <a href="#" class="card__button">Take a look --></a>
-              </div>
-            </div>
-          </div>
-        </figure>
-      </div>
-    </div>
-  </body>
+        </div>
+    </body>
 </html>

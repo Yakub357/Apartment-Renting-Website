@@ -69,9 +69,10 @@ const server = http.createServer((req, res) => {
     });
 
     res.end(data);
+  }
 
-    // ** ERROR PAGE
-  } else {
+  // ** ERROR PAGE
+  else {
     res.writeHead(404);
     res.end(`Page ${pathname} NOT FOUND`);
   }
