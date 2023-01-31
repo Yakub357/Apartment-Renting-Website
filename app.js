@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 
 // ** Importing ROUTES
-// TODO create the routes for the website
+const apartmentRouter = require("./routes/apartmentRoutes");
 
 const app = express();
 
@@ -22,6 +22,6 @@ app.use((req, res, next) => {
 });
 
 // ** MOUNTING the routers
-// TODO implement the routing
+app.use("/api/v1/apartments", apartmentRouter);
 
 module.exports = app;
